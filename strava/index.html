@@ -66,8 +66,17 @@
                     <li>Não vendemos ou compartilhamos seus dados da Strava com terceiros.</li>
                 </ul>
 
-                <h2>Authorization Callback Domain</h2>
-                <p>Para autenticação OAuth com a Strava, use este callback:</p>
+                <h2>Callback de autorização</h2>
+                <p>
+                    No cadastro do aplicativo na Strava, o campo <strong>Authorization Callback Domain</strong>
+                    deve conter apenas o domínio, sem barras ou caminhos:
+                </p>
+                <div class="code-block">
+                    <code>devotion.run</code>
+                </div>
+                <p>
+                    A URL completa de callback usada no fluxo OAuth é:
+                </p>
                 <div class="code-block">
                     <code>https://devotion.run/strava/callback</code>
                 </div>
