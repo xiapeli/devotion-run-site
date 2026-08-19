@@ -4,182 +4,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strava Integration — Devotion.Run</title>
-
-    <!-- SEO -->
-    <meta name="description"
-        content="Connect Devotion.Run with Strava. Upload your prayer-powered runs and keep your Strava activity feed in sync.">
-    <meta name="author" content="Devotion.Run">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Strava Integration — Devotion.Run">
-    <meta property="og:description" content="Sync your devotional runs with Strava.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://devotion.run/strava/">
-
-    <!-- Fonts -->
+    <title>Integração Strava — Devotion.Run</title>
+    <meta name="description" content="Conecte Devotion.Run com Strava. Compartilhe suas corridas com propósito.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../legal.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✝️</text></svg>">
+    <link rel="icon" type="image/png" href="../images/app-icon.png">
 </head>
 
 <body>
-    <!-- Page Loader -->
-    <div class="page-loader" id="pageLoader">
-        <div class="loader-icon"></div>
-    </div>
-
-    <!-- Mobile overlay -->
-    <div class="nav-overlay" id="navOverlay"></div>
-
-    <!-- ==================== NAVIGATION ==================== -->
     <nav class="navbar" id="navbar">
-        <div class="container">
+        <div class="container nav-container">
             <a href="/" class="nav-logo">
-                <span class="logo-icon">✝</span>
+                <img src="../images/app-icon.png" alt="Devotion.Run" class="nav-logo-icon">
                 <span>Devotion<span class="logo-dot">.</span>Run</span>
             </a>
-
             <div class="nav-links" id="navLinks">
                 <a href="/">Home</a>
-                <a href="/privacy">Privacy</a>
-                <a href="/terms">Terms</a>
+                <a href="/privacy">Privacidade</a>
+                <a href="/terms">Termos</a>
                 <a href="/strava/">Strava</a>
-                <a href="mailto:contato@devotion.run" class="nav-cta">Contact</a>
             </div>
-
+            <a href="/#download" class="btn-primary btn-small">Baixar</a>
             <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-                <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
     </nav>
 
-    <!-- ==================== INTEGRATION HERO ==================== -->
     <section class="legal-hero">
         <div class="container">
-            <span class="section-label">Integration</span>
+            <span class="eyebrow">Integração</span>
             <h1>Strava × Devotion.Run</h1>
-            <p class="legal-updated">Share every prayer-powered run with your Strava community.</p>
+            <p class="legal-updated">Compartilhe cada corrida com propósito.</p>
         </div>
     </section>
 
-    <!-- ==================== INTEGRATION CONTENT ==================== -->
     <section class="legal-content">
-        <div class="container legal-container">
+        <div class="container">
             <div class="legal-body">
                 <p class="legal-intro">
-                    Devotion.Run integrates with Strava to make it easy to keep your training log and your faith journey
-                    connected. When you link your Strava account, runs tracked in Devotion.Run can be uploaded directly
-                    to Strava — including distance, duration, route, and the verse that inspired you.
+                    A integração com Strava permite que você publique seus treinos do Devotion.Run diretamente na sua conta Strava,
+                    mantendo seu histórico de corridas e sua jornada de fé conectados.
                 </p>
 
-                <h2>What We Sync</h2>
+                <h2>O que sincronizamos</h2>
                 <ul>
-                    <li><strong>Activity data:</strong> distance, duration, pace, elevation, GPS route, and start time.
-                    </li>
-                    <li><strong>Activity name:</strong> auto-generated with a devotional touch (e.g., “Morning Run with
-                        Hebrews 12:1”).</li>
-                    <li><strong>Description:</strong> optional prayer intention or reflection you choose to share.</li>
+                    <li><strong>Dados da atividade:</strong> distância, duração, ritmo, elevação, rota GPS e horário de início.</li>
+                    <li><strong>Nome da atividade:</strong> gerado automaticamente com referência ao versículo do dia.</li>
+                    <li><strong>Descrição:</strong> intenção de oração ou reflexão que você escolher compartilhar.</li>
                 </ul>
 
-                <h2>What We Do Not Do</h2>
+                <h2>O que não fazemos</h2>
                 <ul>
-                    <li>We do not post without your permission.</li>
-                    <li>We do not access your Strava messages, clubs, or private conversations.</li>
-                    <li>We do not sell or share your Strava data with third parties.</li>
+                    <li>Não publicamos nada sem sua permissão.</li>
+                    <li>Não acessamos mensagens, clubes ou conversas privadas da Strava.</li>
+                    <li>Não vendemos ou compartilhamos seus dados da Strava com terceiros.</li>
                 </ul>
 
                 <h2>Authorization Callback Domain</h2>
-                <p>
-                    For Strava OAuth authentication, our authorized callback domain is:
-                </p>
+                <p>Para autenticação OAuth com a Strava, use este callback:</p>
                 <div class="code-block">
                     <code>https://devotion.run/strava/callback</code>
                 </div>
                 <p>
-                    This is the secure endpoint Strava uses to return you to Devotion.Run after you approve the
-                    connection. The callback only receives a temporary authorization code and immediately redirects you
-                    back to the app.
+                    Este é o endpoint seguro que a Strava usa para retornar você ao Devotion.Run após aprovar a conexão.
+                    O callback recebe apenas um código temporário de autorização e redireciona imediatamente de volta ao app.
                 </p>
 
-                <h2>How to Connect</h2>
+                <h2>Como conectar</h2>
                 <ol>
-                    <li>Open Devotion.Run and go to <strong>Profile → Integrations → Strava</strong>.</li>
-                    <li>Tap <strong>Connect Strava</strong>.</li>
-                    <li>Log in to Strava and approve the requested permissions.</li>
-                    <li>You will be returned to Devotion.Run automatically.</li>
+                    <li>Abra o Devotion.Run e vá em <strong>Perfil → Integrações → Strava</strong>.</li>
+                    <li>Toque em <strong>Conectar Strava</strong>.</li>
+                    <li>Faça login na Strava e aprove as permissões solicitadas.</li>
+                    <li>Você será redirecionado automaticamente ao Devotion.Run.</li>
                 </ol>
 
-                <h2>Disconnecting Strava</h2>
+                <h2>Desconectar</h2>
                 <p>
-                    You can disconnect Strava at any time in <strong>Profile → Integrations → Strava → Disconnect</strong>.
-                    Disconnecting stops future uploads but does not delete activities already posted to Strava.
+                    Você pode desconectar a Strava a qualquer momento em <strong>Perfil → Integrações → Strava → Desconectar</strong>.
+                    A desconexão interrompe novos envios, mas não exclui atividades já publicadas na Strava.
                 </p>
 
-                <h2>Strava Brand Guidelines</h2>
+                <h2>Diretrizes da marca Strava</h2>
                 <p>
-                    Devotion.Run complies with Strava's <a href="https://developers.strava.com/guidelines/" target="_blank"
-                        rel="noopener noreferrer">API Brand Guidelines</a> and
-                    <a href="https://www.strava.com/legal/api" target="_blank" rel="noopener noreferrer">API Terms of
-                        Service</a>. Strava is a registered trademark of Strava, Inc.
+                    O Devotion.Run segue as <a href="https://developers.strava.com/guidelines/" target="_blank" rel="noopener noreferrer">API Brand Guidelines</a>
+                    e os <a href="https://www.strava.com/legal/api" target="_blank" rel="noopener noreferrer">Termos de API da Strava</a>.
+                    Strava é marca registrada de Strava, Inc.
                 </p>
 
-                <h2>Need Help?</h2>
-                <p>
-                    If you have trouble connecting Strava or have questions about the integration, contact us at<br>
-                    📧 <a href="mailto:contato@devotion.run">contato@devotion.run</a>
-                </p>
+                <div class="legal-card">
+                    <h3>Resumo técnico</h3>
+                    <ul>
+                        <li><strong>Callback URL:</strong> <code>https://devotion.run/strava/callback</code></li>
+                        <li><strong>Escopos:</strong> read, activity:write, activity:read</li>
+                        <li><strong>Plataforma:</strong> iOS (Apple Watch suportado)</li>
+                    </ul>
+                </div>
             </div>
-
-            <aside class="legal-sidebar">
-                <div class="legal-card">
-                    <h3>Strava Details</h3>
-                    <ul>
-                        <li><strong>Callback URL:</strong><br><code>https://devotion.run/strava/callback</code></li>
-                        <li><strong>Scopes:</strong> read, activity:write, activity:read</li>
-                        <li><strong>Platform:</strong> iOS (Apple Watch supported)</li>
-                    </ul>
-                </div>
-                <div class="legal-card">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms of Service</a></li>
-                        <li><a href="mailto:contato@devotion.run">Contact Support</a></li>
-                    </ul>
-                </div>
-            </aside>
         </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-left">
-                <span class="footer-logo">Devotion<span class="logo-dot">.</span>Run</span>
-                <span class="footer-copy">© 2026 Devotion.Run • Soli Deo Gloria</span>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="../images/app-icon.png" alt="Devotion.Run" class="footer-logo-icon">
+                        <span>Devotion<span class="logo-dot">.</span>Run</span>
+                    </a>
+                    <p>Corra com propósito. Corra com Deus.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Produto</h4>
+                    <a href="/#como-funciona">Como funciona</a>
+                    <a href="/#recursos">Recursos</a>
+                    <a href="/#download">Download</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="/privacy">Privacidade</a>
+                    <a href="/terms">Termos</a>
+                    <a href="/strava/">Strava</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Contato</h4>
+                    <a href="mailto:contato@devotion.run">contato@devotion.run</a>
+                </div>
             </div>
-
-            <div class="footer-links">
-                <a href="/privacy">Privacy</a>
-                <a href="/terms">Terms</a>
-                <a href="mailto:contato@devotion.run">Contact</a>
-            </div>
-
-            <div class="footer-social">
-                <a href="#" aria-label="Instagram" title="Instagram">📸</a>
-                <a href="#" aria-label="YouTube" title="YouTube">▶️</a>
-                <a href="#" aria-label="Twitter" title="Twitter">🐦</a>
+            <div class="footer-bottom">
+                <p>© 2026 Devotion.Run. Soli Deo Gloria.</p>
             </div>
         </div>
     </footer>

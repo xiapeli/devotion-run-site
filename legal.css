@@ -1,138 +1,112 @@
 /* ============================================
-   DevotionRun — Legal & Integration Pages
+   Devotion.Run — Legal & Strava Pages
    ============================================ */
 
 .legal-hero {
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: clamp(140px, 20vh, 200px) 0 clamp(60px, 8vh, 100px);
-    position: relative;
-    background: var(--bg-secondary);
+    padding: 160px 0 80px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
 }
 
-.legal-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
-}
-
-.legal-hero .section-label {
-    margin-bottom: 20px;
+.legal-hero .container {
+    max-width: 800px;
 }
 
 .legal-hero h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-    margin-bottom: 16px;
+    margin-top: 16px;
+    margin-bottom: 12px;
 }
 
 .legal-updated {
-    color: var(--text-muted);
     font-size: 0.9rem;
+    color: var(--gray);
 }
 
 .legal-content {
-    padding: var(--section-padding);
-    background: var(--bg-primary);
-}
-
-.legal-container {
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 64px;
-    align-items: start;
+    padding: 80px 0 120px;
+    background: var(--cream);
 }
 
 .legal-body {
     max-width: 720px;
+    margin: 0 auto;
 }
 
 .legal-intro {
     font-size: 1.1rem;
-    color: var(--text-secondary);
+    color: var(--gray);
     line-height: 1.7;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
 }
 
 .legal-body h2 {
     font-size: 1.5rem;
-    font-weight: 700;
-    margin-top: 40px;
+    margin-top: 48px;
     margin-bottom: 16px;
-    letter-spacing: -0.01em;
 }
 
 .legal-body h3 {
     font-size: 1.15rem;
-    font-weight: 600;
-    margin-top: 24px;
+    margin-top: 28px;
     margin-bottom: 12px;
-    color: var(--gold-light);
+    color: var(--black);
 }
 
 .legal-body p {
-    color: var(--text-secondary);
-    line-height: 1.7;
     margin-bottom: 16px;
+    line-height: 1.7;
 }
 
 .legal-body ul,
 .legal-body ol {
     margin-bottom: 20px;
     padding-left: 24px;
-    color: var(--text-secondary);
-}
-
-.legal-body ul {
-    list-style: disc;
-}
-
-.legal-body ol {
-    list-style: decimal;
 }
 
 .legal-body li {
     margin-bottom: 10px;
     line-height: 1.65;
+    color: var(--gray);
 }
 
 .legal-body a {
-    color: var(--gold);
+    color: var(--gold-dark);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
 .legal-body a:hover {
-    color: var(--gold-light);
+    color: var(--black);
 }
 
-.legal-sidebar {
-    position: sticky;
-    top: 120px;
+.code-block {
+    background: var(--black);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.code-block code {
+    font-family: 'SF Mono', Monaco, monospace;
+    font-size: 0.9rem;
+    color: var(--gold);
 }
 
 .legal-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
+    background: var(--cream-dark);
+    border-radius: 16px;
     padding: 28px;
-    margin-bottom: 24px;
+    margin-top: 40px;
 }
 
 .legal-card h3 {
-    font-size: 1rem;
-    font-weight: 700;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     margin-bottom: 16px;
-    letter-spacing: 0.02em;
 }
 
 .legal-card ul {
@@ -144,16 +118,10 @@
 .legal-card li {
     margin-bottom: 12px;
     font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-}
-
-.legal-card li:last-child {
-    margin-bottom: 0;
 }
 
 .legal-card a {
-    color: var(--gold);
+    color: var(--gold-dark);
     text-decoration: none;
 }
 
@@ -161,45 +129,76 @@
     text-decoration: underline;
 }
 
-.legal-card code {
-    display: block;
-    background: var(--bg-primary);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    padding: 10px;
-    margin-top: 8px;
-    font-family: 'SF Mono', Monaco, monospace;
-    font-size: 0.75rem;
-    color: var(--gold-light);
-    word-break: break-all;
+/* Callback page */
+.callback-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    background: var(--cream);
 }
 
-.code-block {
-    background: var(--bg-card);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
-    padding: 16px 20px;
-    margin: 20px 0;
-    overflow-x: auto;
+.callback-card {
+    background: var(--cream-dark);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 48px;
+    max-width: 460px;
+    width: 100%;
 }
 
-.code-block code {
-    font-family: 'SF Mono', Monaco, monospace;
-    font-size: 0.9rem;
-    color: var(--gold-light);
+.callback-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--black);
+    color: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 24px;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .legal-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
+.callback-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
 
-    .legal-sidebar {
-        position: static;
-        max-width: 480px;
-    }
+.callback-card p {
+    color: var(--gray);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.callback-spinner {
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--border);
+    border-top-color: var(--black);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto;
+}
+
+.callback-error {
+    color: #b91c1c;
+    background: rgba(185, 28, 28, 0.08);
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+.callback-success {
+    color: #15803d;
+    background: rgba(21, 128, 61, 0.08);
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
 }
 
 @media (max-width: 768px) {
@@ -207,11 +206,7 @@
         padding-top: 120px;
     }
 
-    .legal-body h2 {
-        font-size: 1.3rem;
-    }
-
-    .legal-card {
-        padding: 20px;
+    .callback-card {
+        padding: 32px 24px;
     }
 }

@@ -4,73 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devotion.Run — Run with Purpose. Run with God.</title>
+    <title>Devotion.Run — Corra com propósito</title>
 
     <!-- SEO -->
     <meta name="description"
-        content="The devotional app for runners. Combine faith and training in every run. Daily devotionals, Bible verses every km, and a community that runs for the glory of God.">
-    <meta name="keywords"
-        content="running, devotional, christian app, run with God, faith and running, devotion run, corrida, devocional, 跑步, 灵修">
+        content="Devotion.Run é o app de corrida que une fé e treino. Devocionais diários, versículos a cada km e integração com Apple Health, Strava e Apple Watch.">
+    <meta name="keywords" content="corrida cristã, app de corrida, devocional, strava, apple watch, saúde, fé">
     <meta name="author" content="Devotion.Run">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Devotion.Run — Run with Purpose. Run with God.">
-    <meta property="og:description" content="The devotional app for runners. Combine faith and training in every run.">
+    <meta property="og:title" content="Devotion.Run — Corra com propósito">
+    <meta property="og:description" content="O único app de corrida que entrega um versículo bíblico a cada quilômetro.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://devotion.run">
-    <meta property="og:image" content="images/app-home-light.png">
+    <meta property="og:image" content="https://devotion.run/images/home.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✝️</text></svg>">
+    <link rel="icon" type="image/png" href="images/app-icon.png">
 </head>
 
 <body>
-
-    <!-- Page Loader -->
-    <div class="page-loader" id="pageLoader">
-        <div class="loader-icon"></div>
-    </div>
-
-    <!-- Mobile overlay -->
-    <div class="nav-overlay" id="navOverlay"></div>
-
     <!-- ==================== NAVIGATION ==================== -->
     <nav class="navbar" id="navbar">
-        <div class="container">
-            <a href="#" class="nav-logo">
-                <span class="logo-icon">✝</span>
+        <div class="container nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/app-icon.png" alt="Devotion.Run" class="nav-logo-icon">
                 <span>Devotion<span class="logo-dot">.</span>Run</span>
             </a>
 
             <div class="nav-links" id="navLinks">
-                <a href="#features" data-i18n="navFeatures">Features</a>
-                <a href="#how-it-works" data-i18n="navHow">How It Works</a>
-                <a href="#showcase" data-i18n="navApp">The App</a>
-                <a href="#testimonials" data-i18n="navTestimonials">Testimonials</a>
-                <a href="#waitlist" class="nav-cta" data-i18n="navCta">Join Waitlist</a>
+                <a href="#como-funciona">Como funciona</a>
+                <a href="#recursos">Recursos</a>
+                <a href="#integracoes">Integrações</a>
+                <a href="/privacy">Privacidade</a>
+                <a href="/terms">Termos</a>
             </div>
 
-            <!-- Language Switcher -->
-            <div class="lang-switcher">
-                <button class="lang-btn" data-lang="en" title="English">EN</button>
-                <button class="lang-btn" data-lang="pt" title="Português">PT</button>
-                <button class="lang-btn" data-lang="es" title="Español">ES</button>
-                <button class="lang-btn" data-lang="zh" title="中文">中</button>
-            </div>
+            <a href="#download" class="btn-primary btn-small">Baixar na App Store</a>
 
             <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-                <span></span>
                 <span></span>
                 <span></span>
             </button>
@@ -80,301 +60,224 @@
     <!-- ==================== HERO ==================== -->
     <section class="hero" id="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge reveal">
-                    <span class="badge-dot"></span>
-                    <span data-i18n="heroBadge">Coming soon to the App Store</span>
-                </div>
-
-                <h1 class="reveal reveal-delay-1">
-                    <span data-i18n="heroTitle1">Run with purpose.</span><br>
-                    <span class="text-gold" data-i18n="heroTitle2">Run with God.</span>
-                </h1>
-
-                <p class="hero-description reveal reveal-delay-2" data-i18n="heroDesc">
-                    The only app that transforms every run into a time of worship.
-                    Personalized devotionals, Bible verses every kilometer, and a
-                    community of runners who run for the glory of God.
-                </p>
-
-                <div class="hero-actions reveal reveal-delay-3">
-                    <a href="#waitlist" class="btn-primary">
-                        <span data-i18n="heroBtn1">Join the waitlist</span>
-                        <span class="btn-icon">→</span>
-                    </a>
-                    <a href="#how-it-works" class="btn-secondary">
-                        <span data-i18n="heroBtn2">How it works</span>
-                    </a>
-                </div>
-
-                <div class="hero-stats reveal reveal-delay-4">
-                    <div class="hero-stat">
-                        <div class="stat-value" data-i18n="stat1Value">365</div>
-                        <div class="stat-label" data-i18n="stat1Label">Devotionals</div>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow">App de corrida para quem corre por um propósito maior</p>
+                    <h1>
+                        A Palavra antes<br>
+                        de cada corrida.
+                    </h1>
+                    <p class="hero-lead">
+                        Devotion.Run une devocional cristão e treino. Leia a Palavra, corra com intenção
+                        e receba versículos a cada quilômetro — tudo em um único app.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#download" class="btn-primary">
+                            <span>Baixar na App Store</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#como-funciona" class="btn-text">Conheça o app</a>
                     </div>
-                    <div class="hero-stat">
-                        <div class="stat-value" data-i18n="stat2Value">∞</div>
-                        <div class="stat-label" data-i18n="stat2Label">Km with purpose</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="stat-value" data-i18n="stat3Value">1</div>
-                        <div class="stat-label" data-i18n="stat3Label">Faithful God</div>
+                    <div class="hero-trust">
+                        <div class="trust-item">
+                            <span class="trust-number">365</span>
+                            <span class="trust-label">devocionais</span>
+                        </div>
+                        <div class="trust-divider"></div>
+                        <div class="trust-item">
+                            <span class="trust-number">1</span>
+                            <span class="trust-label">versículo por km</span>
+                        </div>
+                        <div class="trust-divider"></div>
+                        <div class="trust-item">
+                            <span class="trust-number">0</span>
+                            <span class="trust-label">concorrentes diretos</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="hero-mockup reveal">
-                <div class="phone-glow"></div>
-                <div class="phone-frame">
-                    <img src="images/app-home-light.png" alt="Devotion.Run - App home screen" loading="eager">
-                </div>
-                <div class="phone-frame phone-frame-secondary">
-                    <img src="images/app-home-dark.png" alt="Devotion.Run - Dark mode" loading="lazy">
+                <div class="hero-visual">
+                    <div class="phone-mockup hero-phone">
+                        <img src="images/home.png" alt="Tela inicial do Devotion.Run mostrando o devocional do dia">
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <span class="floating-cross" style="top: 20%; left: 5%;">✝</span>
-        <span class="floating-cross" style="top: 60%; right: 8%; animation-delay: -3s;">✝</span>
-        <span class="floating-cross" style="bottom: 15%; left: 15%; animation-delay: -5s; font-size: 2rem;">✝</span>
+    <!-- ==================== MANIFESTO ==================== -->
+    <section class="manifesto">
+        <div class="container narrow">
+            <p class="manifesto-text">
+                Correr é mais do que quilômetros. É disciplina, oração e entrega. Devotion.Run nasceu para quem
+                quer transformar cada treino em um ato de fé — sem precisar abrir dois apps ao mesmo tempo.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== COMO FUNCIONA ==================== -->
+    <section class="section" id="como-funciona">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Como funciona</span>
+                <h2>Três passos. Um só propósito.</h2>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Leia</h3>
+                    <p>Comece com o devocional do dia. Uma reflexão curta, escrita para corredores, com um versículo para carregar durante o treino.</p>
+                    <div class="step-image">
+                        <img src="images/devotional.png" alt="Tela de devocional no Devotion.Run">
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Corra</h3>
+                    <p>Defina sua intenção de oração, aperte o play e corra. A cada quilômetro, o app entrega um versículo para te sustentar.</p>
+                    <div class="step-image">
+                        <img src="images/run.png" alt="Tela de corrida ativa no Devotion.Run">
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Registre</h3>
+                    <p>No final, registre o que Deus falou ao seu coração. O resumo da corrida vira uma oferta de gratidão — e pode ser compartilhado.</p>
+                    <div class="step-image">
+                        <img src="images/altar.png" alt="Tela de resumo pós-corrida no Devotion.Run">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- ==================== FEATURES ==================== -->
-    <section class="features" id="features">
+    <section class="section section-dark" id="recursos">
         <div class="container">
-            <div class="section-header reveal">
-                <span class="section-label" data-i18n="featLabel">Features</span>
-                <h2 class="section-title">
-                    <span data-i18n="featTitle1">Faith and running in</span><br>
-                    <span class="text-gold" data-i18n="featTitle2">perfect harmony</span>
-                </h2>
-                <p class="section-subtitle" data-i18n="featSubtitle">
-                    Your body is a temple of the Holy Spirit. Devotion.Run cares for the whole temple — body, mind, and
-                    spirit — with every workout.
-                </p>
+            <div class="section-header">
+                <span class="eyebrow">Recursos</span>
+                <h2>Tudo que você precisa para correr com Deus.</h2>
             </div>
 
             <div class="features-grid">
-                <div class="feature-card reveal reveal-delay-1">
-                    <div class="feature-icon">📖</div>
-                    <h3 data-i18n="feat1Title">Daily Devotional</h3>
-                    <p data-i18n="feat1Desc">
-                        A unique devotional every day, connected to your workout. Read before you run and turn your run
-                        into meditation on the Word.
-                    </p>
-                </div>
-
-                <div class="feature-card reveal reveal-delay-2">
-                    <div class="feature-icon">🏃</div>
-                    <h3 data-i18n="feat2Title">Purposeful Running</h3>
-                    <p data-i18n="feat2Desc">
-                        Set a prayer intention, run, and receive Bible verses every kilometer. Every step is an act of
-                        worship.
-                    </p>
-                </div>
-
-                <div class="feature-card reveal reveal-delay-3">
-                    <div class="feature-icon">🙏</div>
-                    <h3 data-i18n="feat3Title">Faith Community</h3>
-                    <p data-i18n="feat3Desc">
-                        Connect with runners who share your faith. Pray for the community's requests and be strengthened
-                        in the journey.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== VERSE DIVIDER ==================== -->
-    <section class="verse-section">
-        <div class="container reveal">
-            <p class="verse-text" data-i18n="verse1Text">
-                "Therefore, since we are surrounded by such a great cloud of witnesses, let us throw off everything that
-                hinders and the sin that so easily entangles. And let us run with perseverance the race marked out for
-                us."
-            </p>
-            <span class="verse-reference" data-i18n="verse1Ref">Hebrews 12:1</span>
-        </div>
-    </section>
-
-    <!-- ==================== HOW IT WORKS ==================== -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-label" data-i18n="howLabel">How It Works</span>
-                <h2 class="section-title">
-                    <span data-i18n="howTitle1">Three steps to</span><br>
-                    <span class="text-gold" data-i18n="howTitle2">run with God</span>
-                </h2>
-                <p class="section-subtitle" data-i18n="howSubtitle">
-                    Simple as a prayer. Powerful as the Gospel.
-                </p>
-            </div>
-
-            <div class="steps-container">
-                <div class="step reveal reveal-delay-1">
-                    <div class="step-number">🙏</div>
-                    <h3 data-i18n="step1Title">1. Pray</h3>
-                    <p data-i18n="step1Desc">
-                        Set a prayer intention and read the day's devotional. Prepare your heart before lacing up your
-                        shoes.
-                    </p>
-                </div>
-
-                <div class="step reveal reveal-delay-2">
-                    <div class="step-number">🏃</div>
-                    <h3 data-i18n="step2Title">2. Run</h3>
-                    <p data-i18n="step2Desc">
-                        Run with real GPS tracking, receive Bible verses every kilometer, and feel God in every stride.
-                    </p>
-                </div>
-
-                <div class="step reveal reveal-delay-3">
-                    <div class="step-number">✍️</div>
-                    <h3 data-i18n="step3Title">3. Reflect</h3>
-                    <p data-i18n="step3Desc">
-                        Record your post-run reflection in the spiritual journal. Track your growth in body and faith.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== APP SHOWCASE ==================== -->
-    <section class="showcase" id="showcase">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-label" data-i18n="showLabel">The App</span>
-                <h2 class="section-title">
-                    <span data-i18n="showTitle1">Design that</span><br>
-                    <span class="text-gold" data-i18n="showTitle2">honors the Creator</span>
-                </h2>
-                <p class="section-subtitle" data-i18n="showSubtitle">
-                    A premium interface inspired by the beauty of creation. Every detail crafted to elevate your running
-                    and faith experience.
-                </p>
-            </div>
-
-            <div class="showcase-wrapper reveal">
-                <div class="showcase-phone">
-                    <img src="images/app-home-dark.png" alt="Devotion.Run dark mode" loading="lazy">
-                </div>
-                <div class="showcase-phone featured">
-                    <img src="images/app-home-light.png" alt="Devotion.Run main screen" loading="lazy">
-                </div>
-                <div class="showcase-phone">
-                    <img src="images/app-screen-2.png" alt="Devotion.Run workouts" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== TESTIMONIALS ==================== -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-label" data-i18n="testLabel">Testimonials</span>
-                <h2 class="section-title">
-                    <span data-i18n="testTitle1">What our</span><br>
-                    <span class="text-gold" data-i18n="testTitle2">beta testers say</span>
-                </h2>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card reveal reveal-delay-1">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text" data-i18n="test1Text">
-                        "I never thought my morning run could become such a profound moment of communion with God. The
-                        pre-workout devotional completely changed my perspective."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">MR</div>
-                        <div class="testimonial-info">
-                            <div class="name" data-i18n="test1Name">Marcus Reed</div>
-                            <div class="role" data-i18n="test1Role">Runner for 5 years • New York</div>
-                        </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
                     </div>
+                    <h3>365 devocionais</h3>
+                    <p>Um conteúdo novo por dia, escrito para o momento da corrida. Nunca repete. Sempre relevante.</p>
                 </div>
 
-                <div class="testimonial-card reveal reveal-delay-2">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text" data-i18n="test2Text">
-                        "Receiving a Bible verse every kilometer is simply powerful. At km 5 when my body wants to stop,
-                        the Word gives me strength to keep going. Philippians 4:13 in action."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SJ</div>
-                        <div class="testimonial-info">
-                            <div class="name" data-i18n="test2Name">Sarah Johnson</div>
-                            <div class="role" data-i18n="test2Role">Half-marathoner • London</div>
-                        </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
                     </div>
+                    <h3>Versículo por km</h3>
+                    <p>A cada quilômetro percorrido, uma palavra da Escritura. A Palavra vira companheira de corrida.</p>
                 </div>
 
-                <div class="testimonial-card reveal reveal-delay-3">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text" data-i18n="test3Text">
-                        "As a pastor and runner, I was looking for something that united my faith with training.
-                        Devotion.Run is exactly that. I've already recommended it to my entire church running group."
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z"/>
+                            <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3>GPS real</h3>
+                    <p>Rastreamento de distância, ritmo, tempo e rota. Sem simulações. Dados que você pode confiar.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 12h.01M15 12h.01M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Apple Health & Watch</h3>
+                    <p>Sincronize automaticamente seus treinos com o Apple Health e acompanhe no pulso com o Apple Watch.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                        </svg>
+                    </div>
+                    <h3>Diário espiritual</h3>
+                    <p>Registre o que Deus falou durante a corrida. Suas reflexões ficam salvas e sincronizadas.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3>Modo offline</h3>
+                    <p>Baixe devocionais e treine sem internet. A Palavra e seus dados vão com você para qualquer lugar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INTEGRATIONS ==================== -->
+    <section class="section" id="integracoes">
+        <div class="container">
+            <div class="integration-block">
+                <div class="integration-content">
+                    <span class="eyebrow">Integrações</span>
+                    <h2>Conecte suas corridas com Strava.</h2>
+                    <p>
+                        Publique automaticamente seus treinos no Strava, com distância, ritmo, tempo e a reflexão
+                        que você escolher compartilhar. Seus dados, suas regras.
                     </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">JL</div>
-                        <div class="testimonial-info">
-                            <div class="name" data-i18n="test3Name">Pastor James Lee</div>
-                            <div class="role" data-i18n="test3Role">Pastor & ultramarathoner • Austin</div>
-                        </div>
+                    <ul class="integration-list">
+                        <li>Upload automático de atividades</li>
+                        <li>Título e descrição personalizados</li>
+                        <li>Desconecte quando quiser</li>
+                        <li>Callback seguro em <code>devotion.run/strava/callback</code></li>
+                    </ul>
+                    <a href="/strava/" class="btn-secondary">Ver integração Strava</a>
+                </div>
+                <div class="integration-visual">
+                    <div class="phone-mockup">
+                        <img src="images/altar.png" alt="Tela de resumo pós-corrida com opção de compartilhar">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== VERSE DIVIDER 2 ==================== -->
-    <section class="verse-section">
-        <div class="container reveal">
-            <p class="verse-text" data-i18n="verse2Text">
-                "I can do all things through Christ who strengthens me."
-            </p>
-            <span class="verse-reference" data-i18n="verse2Ref">Philippians 4:13</span>
-        </div>
-    </section>
-
-    <!-- ==================== CTA / WAITLIST ==================== -->
-    <section class="cta-section" id="waitlist">
+    <!-- ==================== DOWNLOAD CTA ==================== -->
+    <section class="section-cta" id="download">
         <div class="container">
-            <div class="cta-content reveal">
-                <span class="section-label" data-i18n="ctaLabel">Sign Up</span>
-                <h2>
-                    <span data-i18n="ctaTitle1">Ready to run</span><br>
-                    <span class="text-gold" data-i18n="ctaTitle2">with purpose?</span>
-                </h2>
-                <p data-i18n="ctaDesc">
-                    Join the waitlist and be among the first to experience Devotion.Run. Limited spots for the beta.
+            <div class="cta-block">
+                <h2>Pronto para correr com propósito?</h2>
+                <p class="cta-lead">
+                    Baixe o Devotion.Run na App Store. Em breve também no Apple Watch.
                 </p>
+                <a href="#" class="btn-primary btn-large">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    </svg>
+                    <span>Disponível na App Store</span>
+                </a>
+                <p class="cta-note">Lançamento em breve. Entre na lista de espera para acesso antecipado.</p>
 
-                <form class="waitlist-form" id="waitlistForm" onsubmit="return false;">
-                    <input type="email" data-i18n-placeholder="ctaPlaceholder" placeholder="Your best email"
-                        id="emailInput" required>
-                    <button type="submit" id="waitlistBtn" data-i18n="ctaBtn">Join now</button>
+                <form class="waitlist-form" id="waitlistForm">
+                    <input type="email" placeholder="Seu melhor e-mail" id="emailInput" required>
+                    <button type="submit" id="waitlistBtn">Entrar na lista</button>
                 </form>
-                <p class="cta-note" data-i18n="ctaNote">🔒 No spam. Only launch updates.</p>
-
-                <div class="app-store-badges">
-                    <div class="app-store-badge">
-                        <span class="badge-icon">🍎</span>
-                        <div class="badge-text">
-                            <span class="small" data-i18n="ctaBadge1Small">Coming soon to</span>
-                            <span class="big" data-i18n="ctaBadge1Big">App Store</span>
-                        </div>
-                    </div>
-                    <div class="app-store-badge">
-                        <span class="badge-icon">⌚</span>
-                        <div class="badge-text">
-                            <span class="small" data-i18n="ctaBadge2Small">Compatible with</span>
-                            <span class="big" data-i18n="ctaBadge2Big">Apple Watch</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -382,27 +285,43 @@
     <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-left">
-                <span class="footer-logo">Devotion<span class="logo-dot">.</span>Run</span>
-                <span class="footer-copy">© 2026 Devotion.Run • Soli Deo Gloria</span>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="images/app-icon.png" alt="Devotion.Run" class="footer-logo-icon">
+                        <span>Devotion<span class="logo-dot">.</span>Run</span>
+                    </a>
+                    <p>Corra com propósito. Corra com Deus.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Produto</h4>
+                    <a href="#como-funciona">Como funciona</a>
+                    <a href="#recursos">Recursos</a>
+                    <a href="#integracoes">Integrações</a>
+                    <a href="#download">Download</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="/privacy">Privacidade</a>
+                    <a href="/terms">Termos de Uso</a>
+                    <a href="/strava/">Strava</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contato</h4>
+                    <a href="mailto:contato@devotion.run">contato@devotion.run</a>
+                    <a href="https://instagram.com/devotion.run" target="_blank" rel="noopener">Instagram</a>
+                </div>
             </div>
 
-            <div class="footer-links">
-                <a href="/privacy" data-i18n="footerPrivacy">Privacy</a>
-                <a href="/terms" data-i18n="footerTerms">Terms</a>
-                <a href="/strava/">Strava</a>
-                <a href="mailto:contato@devotion.run" data-i18n="footerContact">Contact</a>
-            </div>
-
-            <div class="footer-social">
-                <a href="#" aria-label="Instagram" title="Instagram">📸</a>
-                <a href="#" aria-label="YouTube" title="YouTube">▶️</a>
-                <a href="#" aria-label="Twitter" title="Twitter">🐦</a>
+            <div class="footer-bottom">
+                <p>© 2026 Devotion.Run. Soli Deo Gloria.</p>
             </div>
         </div>
     </footer>
 
-    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 
