@@ -772,29 +772,6 @@ p {
         width: 220px;
     }
 
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-    }
-}
-
-@media (max-width: 767px) {
-    :root {
-        --section-padding: clamp(56px, 10vw, 80px) 0;
-    }
-
-    h1 {
-        font-size: clamp(1.9rem, 7vw, 2.4rem);
-    }
-
-    h2 {
-        font-size: clamp(1.45rem, 5.5vw, 1.85rem);
-    }
-
-    h3 {
-        font-size: 1.2rem;
-    }
-
     .nav-links,
     .navbar .btn-primary {
         display: none;
@@ -820,6 +797,29 @@ p {
 
     .nav-links.open a {
         font-size: 1.1rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --section-padding: clamp(56px, 10vw, 80px) 0;
+    }
+
+    h1 {
+        font-size: clamp(1.9rem, 7vw, 2.4rem);
+    }
+
+    h2 {
+        font-size: clamp(1.45rem, 5.5vw, 1.85rem);
+    }
+
+    h3 {
+        font-size: 1.2rem;
     }
 
     .hero {
