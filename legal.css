@@ -129,6 +129,31 @@
     text-decoration: underline;
 }
 
+/* Strava Connect Button */
+.strava-connect-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #FC5200;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 20px 0 32px;
+    transition: background-color var(--transition);
+}
+
+.strava-connect-btn:hover {
+    background-color: #e04a00;
+}
+
+.strava-connect-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
 /* Callback page */
 .callback-page {
     min-height: 100vh;
