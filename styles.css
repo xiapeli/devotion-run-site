@@ -264,6 +264,7 @@ p {
 
 .hero-content {
     max-width: 580px;
+    order: 1;
 }
 
 .hero-content .eyebrow {
@@ -271,24 +272,25 @@ p {
 }
 
 .hero-lead {
-    font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
     color: var(--gray);
-    margin: 28px 0 36px;
+    margin: 24px 0 32px;
     line-height: 1.7;
 }
 
 .hero-actions {
     display: flex;
     align-items: center;
-    gap: 28px;
-    margin-bottom: 56px;
+    gap: 24px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .hero-trust {
     display: flex;
     align-items: center;
-    gap: 24px;
-    padding-top: 32px;
+    gap: 20px;
+    padding-top: 28px;
     border-top: 1px solid var(--border);
 }
 
@@ -321,13 +323,14 @@ p {
 .hero-visual {
     display: flex;
     justify-content: center;
+    order: 2;
 }
 
 /* --- Phone Mockup --- */
 .phone-mockup {
     position: relative;
-    width: 280px;
-    border-radius: 44px;
+    width: 260px;
+    border-radius: 40px;
     overflow: hidden;
     background: var(--black);
     box-shadow:
@@ -342,11 +345,11 @@ p {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 120px;
-    height: 28px;
+    width: 110px;
+    height: 26px;
     background: var(--black);
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
     z-index: 2;
 }
 
@@ -356,7 +359,7 @@ p {
 }
 
 .hero-phone {
-    width: 300px;
+    width: 280px;
 }
 
 /* --- Manifesto --- */
@@ -405,7 +408,7 @@ p {
 .steps-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 32px;
 }
 
 .step-card {
@@ -415,26 +418,30 @@ p {
 
 .step-number {
     font-family: var(--font-serif);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--gold-dark);
-    margin-bottom: 16px;
-}
-
-.step-card h3 {
     margin-bottom: 12px;
 }
 
+.step-card h3 {
+    margin-bottom: 10px;
+}
+
 .step-card p {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 28px;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
 }
 
 .step-image {
     margin-top: auto;
-    border-radius: 28px;
+    border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.1);
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .step-image img {
@@ -679,11 +686,12 @@ p {
     .hero-grid {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 60px;
+        gap: 48px;
     }
 
     .hero-content {
-        max-width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
         order: 1;
     }
 
@@ -704,10 +712,21 @@ p {
         order: 0;
     }
 
+    .phone-mockup {
+        width: 240px;
+    }
+
+    .hero-phone {
+        width: 260px;
+    }
+
     .steps-grid {
-        grid-template-columns: 1fr;
-        max-width: 480px;
-        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .step-image {
+        max-width: 240px;
     }
 
     .features-grid {
@@ -717,17 +736,22 @@ p {
     .integration-block {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 60px;
+        gap: 48px;
     }
 
     .integration-content {
-        max-width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
         order: 1;
     }
 
-    .integration-list li {
+    .integration-list {
         display: inline-block;
-        margin: 8px 16px;
+        text-align: left;
+    }
+
+    .integration-list li {
+        margin: 8px 0;
     }
 
     .integration-visual {
@@ -740,6 +764,18 @@ p {
 }
 
 @media (max-width: 768px) {
+    :root {
+        --section-padding: clamp(70px, 12vw, 100px) 0;
+    }
+
+    h1 {
+        font-size: clamp(2.2rem, 8vw, 2.8rem);
+    }
+
+    h2 {
+        font-size: clamp(1.6rem, 6vw, 2rem);
+    }
+
     .nav-links,
     .navbar .btn-primary {
         display: none;
@@ -768,17 +804,43 @@ p {
     }
 
     .hero {
-        padding-top: 120px;
+        padding-top: 110px;
+        padding-bottom: 70px;
+    }
+
+    .hero-grid {
+        gap: 40px;
+    }
+
+    .hero-content {
+        order: 1;
+    }
+
+    .hero-visual {
+        order: 2;
+    }
+
+    .hero-lead {
+        font-size: 1rem;
+        margin: 18px 0 28px;
     }
 
     .hero-actions {
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .hero-actions .btn-primary,
+    .hero-actions .btn-text {
+        width: 100%;
+        justify-content: center;
     }
 
     .hero-trust {
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
+        padding-top: 24px;
     }
 
     .trust-divider {
@@ -786,14 +848,64 @@ p {
         height: 1px;
     }
 
+    .phone-mockup {
+        width: 220px;
+    }
+
+    .hero-phone {
+        width: 240px;
+    }
+
+    .manifesto-text {
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .step-image {
+        max-width: 220px;
+        border-radius: 20px;
+    }
+
     .features-grid {
         grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .feature-item {
+        max-width: 100%;
+    }
+
+    .integration-block {
+        gap: 40px;
+    }
+
+    .integration-content {
+        text-align: left;
+    }
+
+    .integration-list {
+        display: block;
+        width: 100%;
     }
 
     .integration-list li {
         display: block;
-        margin: 12px 0;
+        margin: 10px 0;
         text-align: left;
+    }
+
+    .integration-visual .phone-mockup {
+        width: 240px;
+    }
+
+    .cta-block h2 {
+        font-size: clamp(1.8rem, 7vw, 2.2rem);
     }
 
     .waitlist-form {
