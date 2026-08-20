@@ -66,25 +66,6 @@
                     <li>Não vendemos ou compartilhamos seus dados da Strava com terceiros.</li>
                 </ul>
 
-                <h2>Callback de autorização</h2>
-                <p>
-                    No cadastro do aplicativo na Strava, o campo <strong>Authorization Callback Domain</strong>
-                    deve conter apenas o domínio, sem barras ou caminhos:
-                </p>
-                <div class="code-block">
-                    <code>devotion.run</code>
-                </div>
-                <p>
-                    A URL completa de callback usada no fluxo OAuth é:
-                </p>
-                <div class="code-block">
-                    <code>https://devotion.run/strava/callback</code>
-                </div>
-                <p>
-                    Este é o endpoint seguro que a Strava usa para retornar você ao Devotion.Run após aprovar a conexão.
-                    O callback recebe apenas um código temporário de autorização e redireciona imediatamente de volta ao app.
-                </p>
-
                 <h2>Como conectar</h2>
                 <p>
                     A conexão é iniciada dentro do aplicativo Devotion.Run. O botão abaixo representa o fluxo oficial
@@ -126,11 +107,11 @@
                 </ul>
 
                 <div class="legal-card">
-                    <h3>Resumo técnico</h3>
+                    <h3>Segurança</h3>
                     <ul>
-                        <li><strong>Callback URL:</strong> <code>https://devotion.run/strava/callback</code></li>
-                        <li><strong>Escopos:</strong> read, activity:read, activity:write</li>
-                        <li><strong>Plataforma:</strong> iOS (Apple Watch suportado)</li>
+                        <li>A conexão usa o fluxo oficial de autorização da Strava.</li>
+                        <li>Não armazenamos sua senha da Strava.</li>
+                        <li>Você pode revogar o acesso a qualquer momento na sua conta Strava.</li>
                         <li><strong>Suporte:</strong> <a href="mailto:contato@devotion.run">contato@devotion.run</a></li>
                     </ul>
                 </div>
