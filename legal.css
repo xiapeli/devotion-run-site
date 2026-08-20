@@ -226,6 +226,67 @@
     to { transform: rotate(360deg); }
 }
 
+/* --- Beta Form --- */
+.beta-form {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--black);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--cream);
+    color: var(--black);
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color var(--transition);
+}
+
+.form-group input:focus {
+    border-color: var(--gold-dark);
+}
+
+.beta-form .btn-primary {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.form-note {
+    font-size: 0.8rem;
+    color: var(--gray);
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.form-message {
+    text-align: center;
+    font-size: 0.9rem;
+    min-height: 24px;
+}
+
+.form-message.error {
+    color: #b91c1c;
+    background: rgba(185, 28, 28, 0.08);
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
 @media (max-width: 768px) {
     .legal-hero {
         padding-top: 120px;
